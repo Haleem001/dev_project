@@ -47,11 +47,11 @@ or do vice versa and setup a .env file and add your postgres credentials to use 
 
 # Apply migrations to create database tables:
 
-python manage.py makemigrations
+python manage.py makemigrations <br>
 python manage.py migrate
 
 # Create a superuser to access the Django admin interface and API endpoints:
-While in the base directory do:
+While in the base directory do: <br>
 py create_superuser_script.py
 
 The `create_superuser_script.py` can be edited
@@ -60,7 +60,7 @@ The `create_superuser_script.py` can be edited
 # To run the Django development server:
 python manage.py runserver
 
-The server will start at ` http://localhost:8000/`.
+The server will start at <br>` http://localhost:8000/`.
 
 Go to ` http://localhost:8000/admin` to visit the admin interface.
 

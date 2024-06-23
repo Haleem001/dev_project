@@ -1,4 +1,3 @@
-# adoption/admin.py
 
 from django.contrib import admin
 from .models import Child, AdoptionRequest, User

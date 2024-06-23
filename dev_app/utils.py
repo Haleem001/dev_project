@@ -7,8 +7,6 @@ from io import BytesIO
 from django.core.mail import EmailMessage
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
-from .models import AdoptionRequest
-# utils.py
 
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer

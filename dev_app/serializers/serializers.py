@@ -121,8 +121,6 @@ class ChangePasswordSerializer(serializers.ModelSerializer):
     
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        # businessorgan = serializers.StringRelatedField(many=True)
-
         model = User
         fields = ['id', 'Status',  'username',  'email', 'first_name', 'last_name']
 
