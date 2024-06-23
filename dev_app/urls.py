@@ -13,7 +13,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework.routers import DefaultRouter
 from .views import ChildViewSet, AdoptionRequestViewSet , AdoptionRequestListView
-from .views import send_test_email
+
 
 router = DefaultRouter()
 
@@ -50,9 +50,8 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     # path('adoptions/<int:pk>/approve/', AdoptionRequestViewSet.as_view({'post': 'approve'}), name='adoption-approve'),
     # path('adoptions/<int:pk>/reject/', AdoptionRequestViewSet.as_view({'post': 'reject'}), name='adoption-reject'),
-     path('children/adopted/', ChildViewSet.as_view({'get': 'adopted'}), name='adopted-children'),
-    path('children/unadopted/', ChildViewSet.as_view({'get': 'unadopted'}), name='unadopted-children'),
-     path('send-test-email/', send_test_email),
-      path('adoption-requests/', AdoptionRequestListView.as_view(), name='adoption_request_list'),
+   path('children/adopted/', ChildViewSet.as_view({'get': 'adopted'}), name='adopted-children'),
+   path('children/unadopted/', ChildViewSet.as_view({'get': 'unadopted'}), name='unadopted-children'),
+   path('adoption-requests/', AdoptionRequestListView.as_view(), name='adoption_request_list'),
 
 ]

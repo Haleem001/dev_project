@@ -18,7 +18,7 @@ def create_superuser():
     superuser_data = {
         'status': 'Admin',  # This defines the status of user
         'username': 'admin', # This is the username 
-        'email': 'admin@example.com', #replace it with your email
+        'email': 'mahmudghali01@gmail.com', #replace it with your email
         'password': 'admin_password',  # change the password to a more secure password
         'first_name': 'Admin',
         'last_name': 'User',
