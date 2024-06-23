@@ -1,0 +1,17 @@
+.env
+db.sqlite3
+
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore Django migrations
+**/migrations/
+
+# Ignore Django static files
+static/
+
+# Ignore uploaded media files
+media/
+
+datadump.json
+dev_app/views/views.py
