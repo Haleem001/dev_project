@@ -6,7 +6,7 @@ from .views import (
     MyTokenObtainPairView, ChangePasswordView , RegisterUser, UserList, UserDetail)
 from rest_framework import routers
 
-from dev_app import views
+
 from rest_framework.documentation import include_docs_urls
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
