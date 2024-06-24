@@ -8,7 +8,7 @@ __pycache__/
 **/migrations/
 
 # Ignore Django static files
-static/
+
 
 # Ignore uploaded media files
 media/
@@ -16,3 +16,4 @@ media/
 datadump.json
 dev_app/views/views.py
 create_superuser_script.py
+.vercel

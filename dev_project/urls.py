@@ -25,4 +25,6 @@ urlpatterns = [
     path('api/', include('dev_app.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('grappelli/', include('grappelli.urls')), 
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

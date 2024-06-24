@@ -28,11 +28,11 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = False
 
 
+
+ALLOWED_HOSTS = ['.vercel.app']
 # Application definition
 
 INSTALLED_APPS = [
@@ -62,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'dev_project.urls'
@@ -95,7 +96,7 @@ REST_FRAMEWORK = {
 
 }
 
-WSGI_APPLICATION = 'dev_project.wsgi.application'
+WSGI_APPLICATION = 'dev_project.wsgi.app'
 AUTH_USER_MODEL = 'dev_app.User'
 
 
@@ -160,10 +161,10 @@ USE_I18N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -231,14 +232,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # MEDIA_URL = '/media/'
 
-# CLOUDINARY_STORAGE = {
-#     'CLOUD_NAME':'dx6s6ebfb',
-#     'CLOUDINARY_API_KEY':218749516192242,
-#     'CLOUDINARY_API_SECRET':'7rVd33pMiu_ZkFvm57hqIrtYkUM'
 
-
-# }
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 

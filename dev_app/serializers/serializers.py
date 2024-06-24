@@ -5,6 +5,8 @@ from django.contrib.auth.password_validation import validate_password
 
 class ChildSerializer(serializers.ModelSerializer):
     is_adopted = serializers.SerializerMethodField()
+    img_url = serializers.SerializerMethodField()
+    base_url = 'https://res.cloudinary.com/dx6s6ebfb/'
 
     class Meta:
         model = Child
@@ -12,13 +14,17 @@ class ChildSerializer(serializers.ModelSerializer):
 
     def get_is_adopted(self, obj):
         return obj.is_adopted
+    def get_img_url(self,obj):
+        return f"{self.base_url}{obj.photo}"
     
 
 class ChildSerializer_2(serializers.ModelSerializer):
-
+   
     class Meta:
         model = Child
         exclude = ('is_adopted',)
+  
+    
 
 
 class AdoptionRequestSerializer(serializers.ModelSerializer):
